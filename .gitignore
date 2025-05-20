@@ -1,4 +1,3 @@
-mlruns
 dvclive
 .venv/
 # Byte-compiled / optimized / DLL files
@@ -89,6 +88,6 @@ target/
 *.swo
 
 # Mypy cache
+mlruns
 .mypy_cache/
-/model.pkl
 /metrics.json
