@@ -13,9 +13,17 @@ import dagshub
 import mlflow
 from mlflow.models import infer_signature
 
+import os
+dagshub_token = os.getenv("DAGSHUB_KEY")
+if not dagshub_token:
+    raise EnvironmentError("DAGSHUB_KEY environment variable not set. Please set it to your DagsHub token.")
+
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
+
 
 # Initialize DagsHub for experiment tracking
-dagshub.init(repo_owner='geekvig', repo_name='MLOps-EndtoEnd', mlflow=True)
+#dagshub.init(repo_owner='geekvig', repo_name='MLOps-EndtoEnd', mlflow=True)
 
 # Set the experiment name in MLflow
 mlflow.set_experiment("DVC PIPELINE ")
@@ -25,6 +33,8 @@ mlflow.set_tracking_uri("https://dagshub.com/geekvig/MLOps-EndtoEnd.mlflow")
 
 
 #mlflow.set_experiment("water-potability-prediction")
+
+
 
 def load_data(filepath: str) -> pd.DataFrame:
     try:
