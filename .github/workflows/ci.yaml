@@ -24,6 +24,7 @@ jobs:
           pip install dvc
 
 
-      - name: Run tests
+      - name: Run DVC pipeline 
         run: |
-          if [ -d tests ]; then pytest tests; fi
+          dvc pull
+          dvc repro  
