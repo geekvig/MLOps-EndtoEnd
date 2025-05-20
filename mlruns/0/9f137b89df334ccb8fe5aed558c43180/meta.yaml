@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/anand/Desktop/GitHub_Proj/MLOps-EndtoEnd/mlruns/0/9f137b89df334ccb8fe5aed558c43180/artifacts
+end_time: 1747768735246
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9f137b89df334ccb8fe5aed558c43180
+run_name: bedecked-mule-497
+run_uuid: 9f137b89df334ccb8fe5aed558c43180
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747768735236
+status: 3
+tags: []
+user_id: anand
