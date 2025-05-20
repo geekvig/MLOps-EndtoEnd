@@ -26,5 +26,6 @@ jobs:
 
       - name: Run DVC pipeline 
         run: |
+          dvc fetch 
           dvc pull
           dvc repro  
